@@ -3,7 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable-v24/custom_email.xml" value="0.151" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable-v24/custom_name.xml" value="0.151" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable-v24/ic_user__1_.xml" value="0.151" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable-v24/ic_user__2_.xml" value="0.151" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable-v24/ic_vector__27_.xml" value="0.151" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable-v24/ic_vector__28_.xml" value="0.151" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/font/font.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/layout/activity_main.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/layout/fragment_home_.xml" value="0.11594202898550725" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/layout/fragment_login_.xml" value="0.17083333333333334" />
       </map>
     </option>
   </component>
