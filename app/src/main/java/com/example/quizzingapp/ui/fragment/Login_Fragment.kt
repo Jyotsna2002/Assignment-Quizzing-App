@@ -20,7 +20,7 @@ class Login_Fragment : Fragment() {
 
         binding.loginBtn.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.fragmentContainerView, Login_Fragment())
+                ?.replace(R.id.fragmentContainerView, Home_Fragment())
                 ?.commit()
         }
         return binding.root

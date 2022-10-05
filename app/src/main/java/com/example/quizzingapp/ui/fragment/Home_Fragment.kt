@@ -7,23 +7,27 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.quizzingapp.R
+import com.example.quizzingapp.databinding.FragmentHomeBinding
 import com.example.quizzingapp.databinding.FragmentLoginBinding
 
 class Home_Fragment : Fragment() {
-    private lateinit var binding:FragmentLoginBinding
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        binding=DataBindingUtil.inflate(inflater,R.layout.fragment_login_, container, false)
-
-        binding.loginBtn.setOnClickListener {
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val view = binding.root
+        binding.QuizzBtn.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.fragmentContainerView, Home_Fragment())
+                ?.replace(R.id.fragmentContainerView, Quizz_Fragment())
                 ?.commit()
         }
-        return binding.root
+        return view
     }
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

@@ -8,7 +8,7 @@
             >
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/Quizz"
+        android:id="@+id/QuizzBtn"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:backgroundTint="#354c5b"
