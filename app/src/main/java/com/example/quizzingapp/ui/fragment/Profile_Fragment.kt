@@ -5,8 +5,6 @@ import android.app.ProgressDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Patterns
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,24 +12,30 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
-import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import coil.load
 import com.example.quizzingapp.R
-import com.example.quizzingapp.databinding.FragmentLoginBinding
 import com.example.quizzingapp.databinding.FragmentProfileBinding
-import com.example.quizzingapp.databinding.FragmentQuizzBinding
+import com.example.quizzingapp.ui.activity.MainActivity
 import com.example.quizzingapp.ui.activity.MainActivity.Companion.Image
 import com.example.quizzingapp.ui.activity.MainActivity.Companion.bio
 import com.example.quizzingapp.ui.activity.MainActivity.Companion.email
 import com.example.quizzingapp.ui.activity.MainActivity.Companion.name
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.storage.FirebaseStorage
 import java.util.*
+
 
 class Profile_Fragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
     private var IMAGE_REQUEST_CODE = 100
     private lateinit var Imageuri: Uri
+    var gso: GoogleSignInOptions? = null
+    var gsc: GoogleSignInClient? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -46,6 +50,9 @@ class Profile_Fragment : Fragment() {
 
             }
         }
+        gso =
+            GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build()
+        gsc = context?.let { GoogleSignIn.getClient(it, gso!!) }
         binding.email.text="Your email address is: \n"+ email
         binding.email.textAlignment=View.TEXT_ALIGNMENT_CENTER
         binding.changeUsernameEditText.setText(name)
@@ -60,6 +67,9 @@ class Profile_Fragment : Fragment() {
                 ?.replace(R.id.fragmentContainerView, Home_Fragment())
                 ?.commit()
         }
+        binding.signOut.setOnClickListener {
+            signOut()
+        }
         binding.setProfile.setOnClickListener {
             pickImages()
         }
@@ -68,11 +78,19 @@ class Profile_Fragment : Fragment() {
                 ?.replace(R.id.fragmentContainerView, Home_Fragment())
                 ?.commit()
         }
+
         return view
     }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+    fun signOut() {
+        gsc?.signOut()?.addOnCompleteListener {
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.fragmentContainerView, Login_Fragment())
+                ?.commit()
+        }
     }
     private fun pickImages() {
         val intent = Intent()

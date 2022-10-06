@@ -89,7 +89,7 @@ class Quizz_Fragment : Fragment(), QuizzClickListenerInterface {
     }
     fun printDifferenceDateForHours() {
 
-        value =0* 60 * 1000
+        value *= 60 * 1000
         countDownTimer = object : CountDownTimer(value.toLong(), 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 var diff = millisUntilFinished
