@@ -104,6 +104,8 @@
                         app:boxCornerRadiusTopEnd="8dp"
                         app:boxCornerRadiusTopStart="8dp"
                         app:boxStrokeColor="#354c5b"
+                        app:helperText=""
+                        app:helperTextTextColor="#FD0320"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/login_name">
