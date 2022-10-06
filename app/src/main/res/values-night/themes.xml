@@ -13,4 +13,8 @@
         <item name="android:statusBarColor" >#354c5b</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="ShapeAppearance.App.CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

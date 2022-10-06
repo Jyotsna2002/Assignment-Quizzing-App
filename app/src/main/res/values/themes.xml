@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.QuizzingApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">#354c5b</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -12,5 +12,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >#354c5b</item>
         <!-- Customize your theme here. -->
+    </style>
+    <style name="ShapeAppearance.App.CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
 </resources>

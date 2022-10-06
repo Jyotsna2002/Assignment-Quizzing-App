@@ -3,6 +3,7 @@ package com.example.quizzingapp.ui
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -19,7 +20,11 @@ class QuizzItemsAdapter(private val context: Context,private val result: model_q
 	private var value2=false
 	private var value3=false
 	private var value4=false
-
+	var map=HashMap<Int,List<Int>>()
+    var listop1= mutableListOf<Int>()
+	var listop2= mutableListOf<Int>()
+	var listop3= mutableListOf<Int>()
+	var listop4= mutableListOf<Int>()
 
 
 	inner class ViewHolder(val binding: QuizzListItemsBinding) :
@@ -38,47 +43,119 @@ class QuizzItemsAdapter(private val context: Context,private val result: model_q
 			option4.text=result.result.questions[position].options[3].key.toString()+". "+result.result.questions[position].options[3].lable
 
 			option1.setOnClickListener {
+				val list3= mutableListOf<Int>()
+				if(position in listop1){
+					value1=true
+				}
 				if (value1){
+					listop1.remove(position)
+					val r=map[(position+1)]
+					if (r != null) {
+						list3.addAll(r)
+					}
+					list3.remove(1)
+					map.put((position+1), list3)
+					listener.quizzClickListener(map)
 					highlight(option1, false)
 					value1=false
 				}
 				else{
-					listener.quizzClickListener("1")
+					listop1.add(position)
+					val r=map[(position+1)]
+					if (r != null) {
+						list3.addAll(r)
+					}
+					list3.add(1)
+					map.put((position+1), list3)
+					listener.quizzClickListener(map)
 					highlight(option1, true)
-					value1=true
 				}
 			}
 			option2.setOnClickListener {
+				val list2= mutableListOf<Int>()
+				if(position in listop2){
+					value2=true
+				}
 				if (value2){
+					listop2.remove(position)
+					val r=map[(position+1)]
+					if (r != null) {
+						list2.addAll(r)
+					}
+					list2.remove(2)
+					map.put((position+1), list2)
+					listener.quizzClickListener(map)
 					highlight(option2, false)
 					value2=false
 				}
 				else{
-					listener.quizzClickListener("2")
+					listop2.add(position)
+					val r=map[(position+1)]
+					if (r != null) {
+						list2.addAll(r)
+					}
+					list2.add(2)
+					map.put((position+1), list2)
+					listener.quizzClickListener(map)
 					highlight(option2, true)
-					value2=true
 				}
 			}
 			option3.setOnClickListener {
+				val list2= mutableListOf<Int>()
+				if(position in listop3){
+					value3=true
+				}
 				if (value3){
+					listop3.remove(position)
+					val r=map[(position+1)]
+					if (r != null) {
+						list2.addAll(r)
+					}
+					list2.remove(3)
+					map.put((position+1), list2)
+					listener.quizzClickListener(map)
 					highlight(option3, false)
 					value3=false
 				}
 				else{
-					listener.quizzClickListener("3")
+					listop3.add(position)
+					val r=map[(position+1)]
+					if (r != null) {
+						list2.addAll(r)
+					}
+					list2.add(3)
+					map.put((position+1), list2)
+					listener.quizzClickListener(map)
 					highlight(option3, true)
-					value3=true
 				}
 			}
 			option4.setOnClickListener {
+				val list2= mutableListOf<Int>()
+				if(position in listop4){
+					value4=true
+				}
 				if (value4){
+					listop4.remove(position)
+					val r=map[(position+1)]
+					if (r != null) {
+						list2.addAll(r)
+					}
+					list2.remove(4)
+					map.put((position+1), list2)
+					listener.quizzClickListener(map)
 					highlight(option4, false)
 					value4=false
 				}
 				else{
-					listener.quizzClickListener("4")
+					listop4.add(position)
+					val r=map[(position+1)]
+					if (r != null) {
+						list2.addAll(r)
+					}
+					list2.add(4)
+					map.put((position+1), list2)
+					listener.quizzClickListener(map)
 					highlight(option4, true)
-					value4=true
 				}
 			}
 		}
@@ -103,5 +180,5 @@ class QuizzItemsAdapter(private val context: Context,private val result: model_q
 }
 
 interface QuizzClickListenerInterface {
-	fun quizzClickListener(id:String)
+	fun quizzClickListener(result:Map<Int,List<Int>>)
 }

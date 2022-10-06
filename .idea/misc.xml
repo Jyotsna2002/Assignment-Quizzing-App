@@ -9,11 +9,20 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable-v24/ic_user__2_.xml" value="0.151" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable-v24/ic_vector__27_.xml" value="0.151" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable-v24/ic_vector__28_.xml" value="0.151" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1465" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable/ic_baseline_camera_24.xml" value="0.15" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.15" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable/ic_baseline_change_circle_24.xml" value="0.1795" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.1795" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/drawable/ic_check_circle.xml" value="0.1545" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/font/font.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/layout/activity_main.xml" value="0.17083333333333334" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/layout/fragment_home_.xml" value="0.11594202898550725" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/layout/dialog.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/layout/fragment_home_.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/layout/fragment_login_.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/layout/fragment_profile_.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/layout/fragment_quizz_.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/layout/fragment_result_.xml" value="0.17083333333333334" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/QuizzingApp/app/src/main/res/layout/quizz_list_items.xml" value="0.17083333333333334" />
       </map>
     </option>

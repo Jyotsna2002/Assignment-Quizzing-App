@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "364128389004",
+    "project_id": "quizzing-app-13961",
+    "storage_bucket": "quizzing-app-13961.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364128389004:android:0429287ac187d27f3138a9",
+        "android_client_info": {
+          "package_name": "com.example.quizzingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364128389004-rumen9jffsnsfbt5rn1pjejj1mhkn6fd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu7-CSr9RAIH7KlTj236Mo6g74MB7mINQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364128389004-rumen9jffsnsfbt5rn1pjejj1mhkn6fd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
